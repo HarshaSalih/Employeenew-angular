@@ -7,6 +7,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { FormsModule } from '@angular/forms';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoute:Routes=[
   {
@@ -24,7 +25,8 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     AddEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
