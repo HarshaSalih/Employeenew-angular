@@ -8,11 +8,11 @@ import { ApiService } from '../api.service';
 })
 export class AddEmployeeComponent {
 
-  empcode=""
-  empname=""
+  empCode=""
+  empName=""
   designation=""
   salary=""
-  companyname=""
+  companyName=""
   mobile=""
   username=""
   password=""
@@ -22,7 +22,7 @@ export class AddEmployeeComponent {
 
   readValues=()=>
   {
-    let data:any={"empcode":this.empcode,"empname":this.empname,"designation":this.designation,"salary":this.salary,"companyname":this.companyname,"mobile":this.mobile,"username":this.username,"password":this.password}
+    let data:any={"empCode":this.empCode,"empName":this.empName,"designation":this.designation,"salary":this.salary,"companyName":this.companyName,"mobile":this.mobile,"username":this.username,"password":this.password}
     console.log(data)
     this.api.addEmployee(data).subscribe(
       (response:any)=>
@@ -31,11 +31,11 @@ export class AddEmployeeComponent {
         if (response.status=="success")
         {
           alert("Employee added successfully")
-          this.empcode=""
-          this.empname=""
+          this.empCode=""
+          this.empName=""
           this.designation=""
           this.salary=""
-          this.companyname=""
+          this.companyName=""
           this.mobile=""
           this.username=""
           this.password=""
