@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <label for="" class="form-label">Employee code</label>
+                    <input name="empcode" [(ngModel)]="empcode" type="text" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3 mt-3" *ngFor = "let i of searchData" >
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Employee name</label>
+                <input type="text" class="form-control" value="{{i.empname}}">
+
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Designation</label>
+                <input type="text" class="form-control" value="{{i.designation}}">
+
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Salary</label>
+                <input type="text" class="form-control" value="{{i.salary}}">
+
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Company name</label>
+                <input type="text" class="form-control" value="{{i.companyname}}">
+
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Mobile</label>
+                <input type="text" class="form-control" value="{{i.mobile}}">
+
+            </div>
+            <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+
+                <label for="" class="form-label">Username</label>
+                <input type="text" class="form-control" value="{{i.username}}">
+
+            </div>
+        </div>
+    </div>
+</div>
