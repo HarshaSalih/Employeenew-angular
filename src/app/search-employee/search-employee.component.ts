@@ -34,4 +34,24 @@ export class SearchEmployeeComponent {
   )
   }
 
+  readValue=(id:any)=>
+  {
+    let data:any={
+      "id": id
+  }
+  this.api.deleteEmployee(data).subscribe(
+    (response:any)=>
+    {
+      console.log(response)
+      if(response.status=="success")
+      {
+        alert("Deleted succesfully")
+        this.searchData=[]
+        
+        
+      }
+    }
+  )
+  }
+
 }
